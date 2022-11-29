@@ -1,0 +1,36 @@
+{
+    "name": "categoria",
+    "version": "1.0.0",
+    "description": "Simple Api NodeJS",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cjelovcic/ifts16-is-api.git"
+    },
+    "author": "Taynah",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cjelovcic/ifts16-is-api/issues"
+    },
+    "homepage": "https://github.com/cjelovcic/ifts16-is-api#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.2",
+        "http": "^0.0.1-security",
+        "jsonwebtoken": "^8.5.1",
+        "morgan": "^1.10.0",
+        "uuid": "^8.3.2"
+    },
+    "keywords": [
+        "categoria"
+    ],
+    "devDependencies": {
+        "nodemon": "^2.0.20"
+    }
+}
