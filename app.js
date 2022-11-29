@@ -11,8 +11,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 app.use(middleware.consoleData);
 app.use(middleware.processToken);
+
 app.use("/categoria", categoriaController);
 app.use("/producto", productoController);
 app.use("/mediopago", mediodepagoController);

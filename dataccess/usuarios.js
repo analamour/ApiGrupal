@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require("uuid");
 let Usuarios = [{
         id: 1,
         nombre: "Esteban",
@@ -83,7 +84,7 @@ const getTodos = (filter) => {
 } 
 
 const getUno = (id) => { return Usuarios.find((registro) => registro.id == id);}
-const guardar = (body) => {Usuarios.push(body);}
+const guardar = (body) => {Usuarios.push({...body,id: uuidv4()});}
 
 const borrar = (id) => {
     const index = Usuarios.findIndex((registro) => registro.id == id);

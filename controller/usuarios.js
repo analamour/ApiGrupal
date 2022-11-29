@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require("uuid");
+
 const middleware = require('../utils/middleware');
 
 const router = require("express").Router();
@@ -24,7 +24,7 @@ router.get("/:id", (req, res) => {
 // POST funcionando sin usuario logueado
 router.post("/", (req, res) => {
   
-  const body = { ...req.body, id: getRandomInt(1, 1000000)};
+  const body = { ...req.body, user: req.user};
   dao.guardar(body);
   res.status(200).json(body);
 });
