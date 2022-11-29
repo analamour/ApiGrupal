@@ -25,8 +25,8 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   
   const body = { ...req.body, user: req.user};
-  dao.guardar(body);
-  res.status(200).json(body);
+  const data = dao.guardar(body);
+  res.status(200).json(data);
 });
 
 function getRandomInt(min, max) {
